@@ -70,3 +70,5 @@ const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
 console.log(processManager === processManager2)
+// If true, both processes managers are equal. Therefore, no new instances
+// have been created.
