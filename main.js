@@ -1,3 +1,5 @@
+//********** Factory Method Design Pattern **********//
+
 function Developer(name) {
     this.name = name
     this.type = "Developer"
