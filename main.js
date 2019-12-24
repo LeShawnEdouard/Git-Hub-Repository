@@ -78,5 +78,5 @@ const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
 console.log(processManager === processManager2)
-// If true, both process managers are equal. Therefore, they are both
-// pointed to the same process manager.
+// If true, both process manager (instances) are equal; therefore, both point to
+// the same process manager.
