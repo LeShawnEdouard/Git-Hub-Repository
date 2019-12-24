@@ -45,6 +45,10 @@ employees.forEach( emp => {
 
 //********** Singleton Design Pattern **********//
 
+// What's the scenario? I want to write a program that manages processes.
+// I want to create a 'process' and a 'process manager' so that the process manager
+// can limit the number of instances to one (1) for a process.
+
 function Process(state) {
     this.state = state
 }
