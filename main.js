@@ -1,5 +1,9 @@
 //********** Factory Method Design Pattern **********//
 
+// What's the scenario? I own a software business and I have Developers and Testers
+// as my employees. I want to create a db (database) that will contain my employees.
+// I need an efficient process to create employees and enter them into my db (array).
+
 function Developer(name) {
     this.name = name
     this.type = "Developer"
