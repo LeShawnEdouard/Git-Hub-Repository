@@ -4,43 +4,43 @@
 // as my employees. I want to create a db (database) that will contain my employees.
 // I need an efficient process to create employees and enter them into my db (array).
 
-function Developer(name) {
-    this.name = name
-    this.type = "Developer"
-}
+// function Developer(name) {
+//     this.name = name
+//     this.type = "Developer"
+// }
 
-function Tester(name) {
-    this.name = name
-    this.type = "Tester"
-}
+// function Tester(name) {
+//     this.name = name
+//     this.type = "Tester"
+// }
 
-function EmployeeFactory() {
-    this.create = (name, type) => {
-       switch(type) {
-            case 1:
-               return new Developer(name)
-               break;
-            case 2:
-                return new Tester(name)
-                break;
-       }
-    }
-}
+// function EmployeeFactory() {
+//     this.create = (name, type) => {
+//        switch(type) {
+//             case 1:
+//                return new Developer(name)
+//                break;
+//             case 2:
+//                 return new Tester(name)
+//                 break;
+//        }
+//     }
+// }
 
-function say() {
-    console.log("Hi, I am " + this.name + " and I am a " + this.type)
-}
+// function say() {
+//     console.log("Hi, I am " + this.name + " and I am a " + this.type)
+// }
 
-const employeeFactory = new EmployeeFactory()
-const employees = [];
+// const employeeFactory = new EmployeeFactory()
+// const employees = [];
 
-employees.push(employeeFactory.create("Patrick", 2))
-employees.push(employeeFactory.create("LeShawn", 1))
-employees.push(employeeFactory.create("Alfred", 2))
+// employees.push(employeeFactory.create("Patrick", 2))
+// employees.push(employeeFactory.create("LeShawn", 1))
+// employees.push(employeeFactory.create("Alfred", 2))
 
-employees.forEach( emp => {
-    say.call(emp)
-})
+// employees.forEach( emp => {
+//     say.call(emp)
+// })
 
 
 //********** Singleton Design Pattern **********//
@@ -49,35 +49,35 @@ employees.forEach( emp => {
 // I want to create a 'process' and a 'process manager' so that the process manager
 // can limit the number of instances to one (1) for a process.
 
-function Process(state) {
-    this.state = state
-}
+// function Process(state) {
+//     this.state = state
+// }
 
-const Singleton = (function() {
-    function ProcessManager() {
-        this.numProcess = 0
-    }
+// const Singleton = (function() {
+//     function ProcessManager() {
+//         this.numProcess = 0
+//     }
 
-    let pManager
+//     let pManager
 
-    function createProcessManager() {
-        pManager = new ProcessManager()
-        return pManager
-    }
+//     function createProcessManager() {
+//         pManager = new ProcessManager()
+//         return pManager
+//     }
 
-    return {
-        getProcessManager: () => {
-            if(!pManager)
-                pManager = createProcessManager()
-            return pManager
-        }
-    }
-})()
+//     return {
+//         getProcessManager: () => {
+//             if(!pManager)
+//                 pManager = createProcessManager()
+//             return pManager
+//         }
+//     }
+// })()
 
-const processManager = Singleton.getProcessManager();
-const processManager2 = Singleton.getProcessManager();
+// const processManager = Singleton.getProcessManager();
+// const processManager2 = Singleton.getProcessManager();
 
-console.log(processManager === processManager2)
+// console.log(processManager === processManager2)
 // If true, both process manager (instances) are equal; therefore, both point to
 // the same process manager.
 
@@ -107,10 +107,22 @@ function USPS() {
     }
 }
 
+function Shipping() {
+    this.company = ""
+    this.setStrategy = (company) => {
+        this.company = company
+    }
+    this.calculate = package => {
+        return this.company.calculate(package)
+    }
+}
+
 const fedex = new FedEx()
 const ups = new UPS()
 const usps = new USPS()
 
 const package = { from: "Alabama", to: "Georgia", weight: 1.56 }
-// This is a display example that will NOT be used
 
+const shipping = new Shipping()
+shipping.setStrategy(fedex)
+console.log("Fedex: " + shipping.calculate(package))
