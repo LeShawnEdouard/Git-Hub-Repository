@@ -121,6 +121,7 @@ const fedex = new FedEx()
 const ups = new UPS()
 const usps = new USPS()
 
+// We're not using the example below. Only to define 'package' within global scope
 const package = { from: "Alabama", to: "Georgia", weight: 1.56 }
 
 const shipping = new Shipping()
