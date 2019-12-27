@@ -107,3 +107,10 @@ function USPS() {
     }
 }
 
+const fedex = new FedEx()
+const ups = new UPS()
+const usps = new USPS()
+
+const package = { from: "Alabama", to: "Georgia", weight: 1.56 }
+// This is a display example that will NOT be used
+
