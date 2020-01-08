@@ -87,7 +87,8 @@ console.log(processManager === processManager2)
 
 //********** Strategy Design Pattern **********//
 
-// What's the scenario? 
+// What's the scenario? I want to write a program that provides different
+// shipping calculations for companies such as FedEx, UPS, and USPS.
 
 function FedEx() {
     this.calculate = package => {
