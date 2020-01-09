@@ -148,7 +148,7 @@ console.log("USPS: " + shipping.calculate(package))
 // What's the scenario? 
 
 
-const items = [1, "Name", false, 1.24]
+const items = [1, "LeShawn", false, 1.24]
 
 function Iterator(items) {
     this.items = items
@@ -156,9 +156,11 @@ function Iterator(items) {
 }
 
 Iterator.prototype = {
+    // method used to check if there is another index (true/false)
     hasNext: function() {
         return this.index < this.items.length
     },
+    // method used to check/point to the next index
     next: function() {
         return this.items[this.index++]
     }
@@ -167,3 +169,7 @@ Iterator.prototype = {
 const iter = new Iterator(items)
 console.log("===== Iterator Example Output =====")
 console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.next());
+console.log(iter.hasNext());
