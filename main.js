@@ -168,8 +168,15 @@ Iterator.prototype = {
 
 const iter = new Iterator(items)
 console.log("===== Iterator Example Output =====")
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.next());
-console.log(iter.hasNext());
+
+// While loop used to console.log all items/elements
+// While loop is more efficient and scalable than individually
+// console.log all elements as you see below.
+while(iter.hasNext())
+console.log(iter.next())
+
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.next());
+// console.log(iter.hasNext());
