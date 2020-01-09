@@ -27,7 +27,7 @@ function EmployeeFactory() {
     }
 }
 
-console.log("===== Factory Method Example =====")
+console.log("===== Factory Method Example Output =====")
 function say() {
     console.log("Hi, I am " + this.name + " and I am a " + this.type)
 }
@@ -78,7 +78,7 @@ const Singleton = (function() {
 const processManager = Singleton.getProcessManager();
 const processManager2 = Singleton.getProcessManager();
 
-console.log("===== Singleton Example =====")
+console.log("===== Singleton Example Output =====")
 console.log(processManager === processManager2)
 
 // If true, both process manager (instances) are equal; therefore, both point to
@@ -130,5 +130,13 @@ const package = { from: "Alabama", to: "Georgia", weight: 1.56 }
 
 const shipping = new Shipping()
 shipping.setStrategy(fedex)
-console.log("===== Strategy Example =====")
+console.log("===== Strategy Example Output =====")
 console.log("Fedex: " + shipping.calculate(package))
+
+shipping.setStrategy(ups)
+console.log("UPS: " + shipping.calculate(package))
+
+shipping.setStrategy(usps)
+console.log("USPS: " + shipping.calculate(package))
+
+//********** Strategy Design Pattern **********//
