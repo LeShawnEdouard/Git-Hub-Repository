@@ -139,4 +139,22 @@ console.log("UPS: " + shipping.calculate(package))
 shipping.setStrategy(usps)
 console.log("USPS: " + shipping.calculate(package))
 
-//********** Strategy Design Pattern **********//
+
+//********** Iterator Design Pattern **********//
+
+// Loop over a collection of objects. traverse the collections
+// access the items in the objects in a certain order
+
+// What's the scenario? 
+
+
+const items = [1, "Name", false, 1.24]
+
+function Iterator(items) {
+    this.items = items
+    this.index = 0
+}
+
+Iterator.prototype = {
+    
+}
