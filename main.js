@@ -163,3 +163,7 @@ Iterator.prototype = {
         return this.items[this.index++]
     }
 }
+
+const iter = new Iterator(items)
+console.log("===== Iterator Example Output =====")
+console.log(iter.next());
