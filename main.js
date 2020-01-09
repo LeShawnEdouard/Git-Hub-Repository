@@ -142,9 +142,6 @@ console.log("USPS: " + shipping.calculate(package))
 
 //********** Iterator Design Pattern **********//
 
-// Loop over a collection of objects. traverse the collections
-// access the items in the objects in a certain order
-
 // What's the scenario? I want to write a program that allows me to "loop"
 // over a collection of objects. I want to traverse and manipulate the collection.
 // We will use an array as our collection that consist of different data types.
