@@ -180,3 +180,12 @@ console.log(iter.next())
 // console.log(iter.next());
 // console.log(iter.next());
 // console.log(iter.hasNext());
+
+
+//********** Observer Design Pattern **********//
+
+// What's the scenario? 
+
+function Subject() {
+    this.observers = [] // array of 'observer' functions
+}
