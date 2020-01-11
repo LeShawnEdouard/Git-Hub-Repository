@@ -216,3 +216,12 @@ function Observer1() {
 function Observer2() {
     console.log("Observer 2 Firing!")
 }
+
+subject.subscribe(Observer1)
+subject.subscribe(Observer2)
+
+// will unsubscribe which ever function you pass thru
+subject.unsubscribe(Observer1)
+
+// using the .fire() to call all observer functions to the console
+subject.fire()
