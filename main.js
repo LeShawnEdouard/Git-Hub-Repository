@@ -149,6 +149,7 @@ console.log("USPS: " + shipping.calculate(package))
 
 const items = [1, "LeShawn", false, 1.24]
 
+// Iterator allows you to start from the first or last index of an array
 function Iterator(items) {
     this.items = items
     this.index = 0
