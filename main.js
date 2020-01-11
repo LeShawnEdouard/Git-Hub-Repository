@@ -189,3 +189,9 @@ console.log(iter.next())
 function Subject() {
     this.observers = [] // array of 'observer' functions
 }
+
+Subject.prototype = [
+    subscribe: function(fn) {
+        this.observers.push(fn)
+    },
+]
