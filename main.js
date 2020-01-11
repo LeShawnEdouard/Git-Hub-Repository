@@ -190,7 +190,7 @@ function Subject() {
     this.observers = [] // array of 'observer' functions
 }
 
-Subject.prototype = [
+Subject.prototype = {
     subscribe: function(fn) {
         this.observers.push(fn)
     },
@@ -199,5 +199,10 @@ Subject.prototype = [
             if(fn != fnToRemove)
             return fn
         })
+    },
+    fire: function() {
+        this.observers.forEach( fn => {
+            fn.call()
+        })
     }
-]
+}
