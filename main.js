@@ -206,3 +206,13 @@ Subject.prototype = {
         })
     }
 }
+
+const subject = new Subject()
+
+function Observer1() {
+    console.log("Observer 1 Firing!")
+}
+
+function Observer2() {
+    console.log("Observer 2 Firing!")
+}
