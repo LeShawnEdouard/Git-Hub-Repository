@@ -184,7 +184,10 @@ console.log(iter.next())
 
 //********** Observer Design Pattern **********//
 
-// What's the scenario? 
+// What's the scenario? I want to write a program where I define a one
+// to many dependency relationship between one object "the subject" to
+// many other objects "the observers". The observers will watch for a
+// signal from the subject for them to be executed/called.
 
 function Subject() {
     this.observers = [] // array of 'observer' functions
