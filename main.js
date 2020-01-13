@@ -227,4 +227,5 @@ subject.subscribe(Observer2)
 subject.unsubscribe(Observer1)
 
 // using the .fire() to call all observer functions to the console
+console.log("===== Observer Example Output =====")
 subject.fire()
