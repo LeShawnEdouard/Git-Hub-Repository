@@ -250,3 +250,9 @@ class User {
         this.address = address
     }
 }
+
+class UserBuilder {
+    constructor(name) {
+        this.user = new User(name)
+    }
+}
