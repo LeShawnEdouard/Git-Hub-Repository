@@ -289,6 +289,8 @@ class Address {
 }
 
 class User {
+    // You can create 'optional' parameters by passing them through
+    // as JS objects as you see below {age, phone, address}
     constructor(name, {age, phone, address} = {}) {
         this.name = name
         this.age = age
