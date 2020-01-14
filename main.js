@@ -229,3 +229,24 @@ subject.unsubscribe(Observer1)
 // using the .fire() to call all observer functions to the console
 console.log("===== Observer Example Output =====")
 subject.fire()
+
+
+//********** Builder Design Pattern **********//
+
+// What's the scenario? I want to write a program 
+
+class Address {
+    constructor(zip, street) {
+        this.zip = zip
+        this.street = street
+    }
+}
+
+class User {
+    constructor(name, age, phone, address) {
+        this.name = name
+        this.age = age
+        this.phone = phone
+        this.address = address
+    }
+}
