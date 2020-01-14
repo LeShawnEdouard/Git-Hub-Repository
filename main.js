@@ -270,4 +270,11 @@ class UserBuilder {
         this.user.address = address
         return this
     }
+
+    build() {
+        return this.user
+    }
 }
+
+let builder = new UserBuilder("LeShawn").build()
+console.log(user)
