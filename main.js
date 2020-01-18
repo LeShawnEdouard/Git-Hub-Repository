@@ -301,5 +301,9 @@ class User {
     }
 }
 
+console.log("===== Builder Example Output =====")
 let user = new User("LeShawn", {age:10, address: new Address(27610, "Raleigh")})
 console.log(user)
+
+
+//Refer to "main.ts" for State Design Pattern example
