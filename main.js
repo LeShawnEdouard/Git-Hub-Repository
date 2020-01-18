@@ -233,7 +233,9 @@ subject.fire()
 
 //********** Builder Design Pattern **********//
 
-// What's the scenario? I want to write a program 
+// What's the scenario? I want to write a program that creates a new user
+// by name and other methods that will return the users age, phone, and 
+// address (zip, street).
 
 class Address {
     constructor(zip, street) {
